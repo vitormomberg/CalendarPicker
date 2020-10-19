@@ -351,6 +351,10 @@ export default class CalendarPicker extends Component {
       selectedStartDate: null,
       selectedEndDate: null
     });
+
+    let currentMonthYear = moment({year, month});
+
+    this.props.onMonthChange && this.props.onMonthChange(currentMonthYear);
   }
 
   createMonthProps = state => {
