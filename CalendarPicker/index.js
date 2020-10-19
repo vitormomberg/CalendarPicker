@@ -401,6 +401,10 @@ export default class CalendarPicker extends Component {
       currentMonth: month,
       currentView: 'days'
     });
+
+    let currentMonthYear = moment({year, month});
+
+    this.props.onMonthChange && this.props.onMonthChange(currentMonthYear);
   }
 
   onSwipe(gestureName) {
